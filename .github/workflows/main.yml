@@ -32,10 +32,10 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.5
         
       - name: Restore Nuget packages
-        run: restore nuget sharksprayqa.sln
+        run: restore nuget ci/Test-CI/Test/sharksprayqa.sln
         
       - name: Build the solution
-        run: msbuild sharksprayqa.sln
+        run: msbuild ci/Test-CI/Test/sharksprayqa.sln
         
       - name: Run SpecFlow Tests 
         run : dotnet test --no-restore --verbosity normal
