@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.props" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.props')" />
+  <Import Project="..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props" Condition="Exists('..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props')" />
+  <Import Project="..\packages\NUnit3TestAdapter.3.11.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.11.1\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D03C77D4-99F5-4878-A5BF-A4B89E89D92A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharkSprayqa</RootNamespace>
+    <AssemblyName>SharkSprayqa</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.86.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=5.7.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.7.1\lib\net45\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="Gherkin, Version=5.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\Gherkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SeleniumExtras.WaitHelpers, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.WaitHelpers.3.11.0\lib\net45\SeleniumExtras.WaitHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlow.Plus.Excel, Version=1.8.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\SpecFlow.Plus.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlow.Plus.Excel.SpecFlowPlugin, Version=1.8.0.0, Culture=neutral, PublicKeyToken=d0fc5cc18b3b389b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Plus.Excel.2-4-0.1.8.0-unstable036\lib\SpecFlow.Plus.Excel.SpecFlowPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Feature\Sparkspray.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sparkspray.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\BrowserConfig.cs" />
+    <Compile Include="Helper\CompareHashValue.cs" />
+    <Compile Include="Helper\CreateDropdowns.cs" />
+    <Compile Include="Helper\ExplicitWaiting.cs" />
+    <Compile Include="Helper\HelpFunction.cs" />
+    <Compile Include="Helper\ObjectIdentifiers.cs" />
+    <Compile Include="Helper\TakeScreenshot.cs" />
+    <Compile Include="Helper\WriteDataToExcel.cs" />
+    <Compile Include="Hooks\binding.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefination\SharksprayStep.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="BackupFolder\Sharkspray_Testcases.xlsx" />
+    <None Include="BackupFolder\Sharkspray_TestResult.xlsx" />
+    <None Include="Feature\Sharkspray_Testcases.xlsx" />
+    <None Include="Feature\Sparkspray.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Sparkspray.feature.cs</LastGenOutput>
+    </None>
+    <None Include="killChromedriver.bat" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\SharkSprayqa.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\SharkSprayqa.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\ABAQUS\cm-g-s\oca2_p2.inp" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\ABAQUS\in-lbf-s\oca2_p2.inp" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\ABAQUS\m-kg-s\oca2_p2.inp" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\ABAQUS\mm-g-ms\oca2_p2.inp" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\ABAQUS\mm-N-s\oca2_p2.inp" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\oca2_p2_ModelFiles\oca2_p2 Data Sheet.xlsx" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ABAQUS\cm-g-s\oca2_p3.inp" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ABAQUS\in-lbf-s\oca2_p3.inp" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ABAQUS\m-kg-s\oca2_p3.inp" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ABAQUS\mm-g-ms\oca2_p3.inp" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ABAQUS\mm-N-s\oca2_p3.inp" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ANSYS MAPDL\cm-g-s\oca2_p3.ans" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ANSYS MAPDL\in-lbf-s\oca2_p3.ans" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ANSYS MAPDL\m-kg-s\oca2_p3.ans" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ANSYS MAPDL\mm-g-ms\oca2_p3.ans" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\ANSYS MAPDL\mm-N-s\oca2_p3.ans" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\oca2_p3 Data Sheet.xlsx" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\oca_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\oca_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\oca2_p3_ModelFiles\oca_ModelFiles\oca Data Sheet.xlsx" />
+    <None Include="Reference_files\oca_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\oca_ModelFiles\ABAQUS\cm-g-s\oca.inp" />
+    <None Include="Reference_files\oca_ModelFiles\ABAQUS\in-lbf-s\oca.inp" />
+    <None Include="Reference_files\oca_ModelFiles\ABAQUS\m-kg-s\oca.inp" />
+    <None Include="Reference_files\oca_ModelFiles\ABAQUS\mm-g-ms\oca.inp" />
+    <None Include="Reference_files\oca_ModelFiles\ABAQUS\mm-N-s\oca.inp" />
+    <None Include="Reference_files\oca_ModelFiles\ANSYS MAPDL\cm-g-s\oca.ans" />
+    <None Include="Reference_files\oca_ModelFiles\ANSYS MAPDL\in-lbf-s\oca.ans" />
+    <None Include="Reference_files\oca_ModelFiles\ANSYS MAPDL\m-kg-s\oca.ans" />
+    <None Include="Reference_files\oca_ModelFiles\ANSYS MAPDL\mm-g-ms\oca.ans" />
+    <None Include="Reference_files\oca_ModelFiles\ANSYS MAPDL\mm-N-s\oca.ans" />
+    <None Include="Reference_files\oca_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\oca_ModelFiles\LS-DYNA\cm-g-s\oca.k" />
+    <None Include="Reference_files\oca_ModelFiles\LS-DYNA\in-lbf-s\oca.k" />
+    <None Include="Reference_files\oca_ModelFiles\LS-DYNA\m-kg-s\oca.k" />
+    <None Include="Reference_files\oca_ModelFiles\LS-DYNA\mm-g-ms\oca.k" />
+    <None Include="Reference_files\oca_ModelFiles\LS-DYNA\mm-N-s\oca.k" />
+    <None Include="Reference_files\oca_ModelFiles\oca Data Sheet.xlsx" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ABAQUS\cm-g-s\orchestrator_hitemp.inp" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ABAQUS\in-lbf-s\orchestrator_hitemp.inp" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ABAQUS\m-kg-s\orchestrator_hitemp.inp" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ABAQUS\mm-g-ms\orchestrator_hitemp.inp" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ABAQUS\mm-N-s\orchestrator_hitemp.inp" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ANSYS MAPDL\cm-g-s\orchestrator_hitemp.ans" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ANSYS MAPDL\in-lbf-s\orchestrator_hitemp.ans" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ANSYS MAPDL\m-kg-s\orchestrator_hitemp.ans" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ANSYS MAPDL\mm-g-ms\orchestrator_hitemp.ans" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\ANSYS MAPDL\mm-N-s\orchestrator_hitemp.ans" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\LS-DYNA\cm-g-s\orchestrator_hitemp.k" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\LS-DYNA\in-lbf-s\orchestrator_hitemp.k" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\LS-DYNA\m-kg-s\orchestrator_hitemp.k" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\LS-DYNA\mm-g-ms\orchestrator_hitemp.k" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\LS-DYNA\mm-N-s\orchestrator_hitemp.k" />
+    <None Include="Reference_files\orchestrator_hitemp_ModelFiles\orchestrator_hitemp Data Sheet.xlsx" />
+    <None Include="Reference_files\q800_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\q800_ModelFiles\ABAQUS\cm-g-s\q800.inp" />
+    <None Include="Reference_files\q800_ModelFiles\ABAQUS\in-lbf-s\q800.inp" />
+    <None Include="Reference_files\q800_ModelFiles\ABAQUS\m-kg-s\q800.inp" />
+    <None Include="Reference_files\q800_ModelFiles\ABAQUS\mm-g-ms\q800.inp" />
+    <None Include="Reference_files\q800_ModelFiles\ABAQUS\mm-N-s\q800.inp" />
+    <None Include="Reference_files\q800_ModelFiles\ANSYS MAPDL\cm-g-s\q800.ans" />
+    <None Include="Reference_files\q800_ModelFiles\ANSYS MAPDL\in-lbf-s\q800.ans" />
+    <None Include="Reference_files\q800_ModelFiles\ANSYS MAPDL\m-kg-s\q800.ans" />
+    <None Include="Reference_files\q800_ModelFiles\ANSYS MAPDL\mm-g-ms\q800.ans" />
+    <None Include="Reference_files\q800_ModelFiles\ANSYS MAPDL\mm-N-s\q800.ans" />
+    <None Include="Reference_files\q800_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\q800_ModelFiles\LS-DYNA\cm-g-s\q800.k" />
+    <None Include="Reference_files\q800_ModelFiles\LS-DYNA\in-lbf-s\q800.k" />
+    <None Include="Reference_files\q800_ModelFiles\LS-DYNA\m-kg-s\q800.k" />
+    <None Include="Reference_files\q800_ModelFiles\LS-DYNA\mm-g-ms\q800.k" />
+    <None Include="Reference_files\q800_ModelFiles\LS-DYNA\mm-N-s\q800.k" />
+    <None Include="Reference_files\q800_ModelFiles\q800 Data Sheet.xlsx" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ABAQUS\cm-g-s\rheology.inp" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ABAQUS\in-lbf-s\rheology.inp" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ABAQUS\m-kg-s\rheology.inp" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ABAQUS\mm-g-ms\rheology.inp" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ABAQUS\mm-N-s\rheology.inp" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ANSYS MAPDL\cm-g-s\rheology.ans" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ANSYS MAPDL\in-lbf-s\rheology.ans" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ANSYS MAPDL\m-kg-s\rheology.ans" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ANSYS MAPDL\mm-g-ms\rheology.ans" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\ANSYS MAPDL\mm-N-s\rheology.ans" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\LS-DYNA\cm-g-s\rheology.k" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\LS-DYNA\in-lbf-s\rheology.k" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\LS-DYNA\m-kg-s\rheology.k" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\LS-DYNA\mm-g-ms\rheology.k" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\LS-DYNA\mm-N-s\rheology.k" />
+    <None Include="Reference_files\rheology_xlsx_ModelFiles\rheology Data Sheet.xlsx" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ABAQUS\cm-g-s\sa_bt1.inp" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ABAQUS\in-lbf-s\sa_bt1.inp" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ABAQUS\m-kg-s\sa_bt1.inp" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ABAQUS\mm-g-ms\sa_bt1.inp" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ABAQUS\mm-N-s\sa_bt1.inp" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ANSYS MAPDL\cm-g-s\sa_bt1.ans" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ANSYS MAPDL\in-lbf-s\sa_bt1.ans" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ANSYS MAPDL\m-kg-s\sa_bt1.ans" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ANSYS MAPDL\mm-g-ms\sa_bt1.ans" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\ANSYS MAPDL\mm-N-s\sa_bt1.ans" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\LS-DYNA\cm-g-s\sa_bt1.k" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\LS-DYNA\in-lbf-s\sa_bt1.k" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\LS-DYNA\m-kg-s\sa_bt1.k" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\LS-DYNA\mm-g-ms\sa_bt1.k" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\LS-DYNA\mm-N-s\sa_bt1.k" />
+    <None Include="Reference_files\sa_bt1_ModelFiles\sa_bt1 Data Sheet.xlsx" />
+    <None Include="Reference_files\tobias_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\tobias_ModelFiles\ABAQUS\cm-g-s\tobias.inp" />
+    <None Include="Reference_files\tobias_ModelFiles\ABAQUS\in-lbf-s\tobias.inp" />
+    <None Include="Reference_files\tobias_ModelFiles\ABAQUS\m-kg-s\tobias.inp" />
+    <None Include="Reference_files\tobias_ModelFiles\ABAQUS\mm-g-ms\tobias.inp" />
+    <None Include="Reference_files\tobias_ModelFiles\ABAQUS\mm-N-s\tobias.inp" />
+    <None Include="Reference_files\tobias_ModelFiles\ANSYS MAPDL\cm-g-s\tobias.ans" />
+    <None Include="Reference_files\tobias_ModelFiles\ANSYS MAPDL\in-lbf-s\tobias.ans" />
+    <None Include="Reference_files\tobias_ModelFiles\ANSYS MAPDL\m-kg-s\tobias.ans" />
+    <None Include="Reference_files\tobias_ModelFiles\ANSYS MAPDL\mm-g-ms\tobias.ans" />
+    <None Include="Reference_files\tobias_ModelFiles\ANSYS MAPDL\mm-N-s\tobias.ans" />
+    <None Include="Reference_files\tobias_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\tobias_ModelFiles\LS-DYNA\cm-g-s\tobias.k" />
+    <None Include="Reference_files\tobias_ModelFiles\LS-DYNA\in-lbf-s\tobias.k" />
+    <None Include="Reference_files\tobias_ModelFiles\LS-DYNA\m-kg-s\tobias.k" />
+    <None Include="Reference_files\tobias_ModelFiles\LS-DYNA\mm-g-ms\tobias.k" />
+    <None Include="Reference_files\tobias_ModelFiles\LS-DYNA\mm-N-s\tobias.k" />
+    <None Include="Reference_files\tobias_ModelFiles\tobias Data Sheet.xlsx" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ABAQUS\cm-g-s\tobias_v2.inp" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ABAQUS\in-lbf-s\tobias_v2.inp" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ABAQUS\m-kg-s\tobias_v2.inp" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ABAQUS\mm-g-ms\tobias_v2.inp" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ABAQUS\mm-N-s\tobias_v2.inp" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ANSYS MAPDL\cm-g-s\tobias_v2.ans" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ANSYS MAPDL\in-lbf-s\tobias_v2.ans" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ANSYS MAPDL\m-kg-s\tobias_v2.ans" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ANSYS MAPDL\mm-g-ms\tobias_v2.ans" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\ANSYS MAPDL\mm-N-s\tobias_v2.ans" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\LS-DYNA\cm-g-s\tobias_v2.k" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\LS-DYNA\in-lbf-s\tobias_v2.k" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\LS-DYNA\m-kg-s\tobias_v2.k" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\LS-DYNA\mm-g-ms\tobias_v2.k" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\LS-DYNA\mm-N-s\tobias_v2.k" />
+    <None Include="Reference_files\tobias_v2_ModelFiles\tobias_v2 Data Sheet.xlsx" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\3M_FEA_Small_Strain_Models_for_PSAs_2019.pdf" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ABAQUS\cm-g-s\trios_hitemp.inp" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ABAQUS\in-lbf-s\trios_hitemp.inp" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ABAQUS\m-kg-s\trios_hitemp.inp" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ABAQUS\mm-g-ms\trios_hitemp.inp" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ABAQUS\mm-N-s\trios_hitemp.inp" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ANSYS MAPDL\cm-g-s\trios_hitemp.ans" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ANSYS MAPDL\in-lbf-s\trios_hitemp.ans" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ANSYS MAPDL\m-kg-s\trios_hitemp.ans" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ANSYS MAPDL\mm-g-ms\trios_hitemp.ans" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\ANSYS MAPDL\mm-N-s\trios_hitemp.ans" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\IMPORTANT NOTICE.pdf" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\LS-DYNA\cm-g-s\trios_hitemp.k" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\LS-DYNA\in-lbf-s\trios_hitemp.k" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\LS-DYNA\m-kg-s\trios_hitemp.k" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\LS-DYNA\mm-g-ms\trios_hitemp.k" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\LS-DYNA\mm-N-s\trios_hitemp.k" />
+    <None Include="Reference_files\trios_hitemp_ModelFiles\trios_hitemp Data Sheet.xlsx" />
+    <None Include="TestFiles\oca.xlsx" />
+    <None Include="TestFiles\oca2_tension.xlsx" />
+    <None Include="TestFiles\q800.001" />
+    <None Include="TestFiles\sa_bt1.xlsx" />
+    <None Include="TestFiles\tobias.xlsx" />
+    <None Include="TestFiles\tobias_v2.xlsx" />
+    <None Include="TestResults\Sharkspray_TestResult.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BackupFolder\ref_hashBU\" />
+    <Folder Include="BackupFolder\Web_hashBU\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Reference_files\oca2_p3_ModelFiles\oca2_p2_ModelFiles\" />
+    <Folder Include="Reference_files\oca2_p3_ModelFiles\oca_ModelFiles\ABAQUS\" />
+    <Folder Include="Reference_files\oca2_p3_ModelFiles\oca_ModelFiles\ANSYS MAPDL\" />
+    <Folder Include="Reference_files\oca2_p3_ModelFiles\oca_ModelFiles\ANSYS WORKBENCH\" />
+    <Folder Include="Reference_files\oca2_p3_ModelFiles\oca_ModelFiles\LS-DYNA\" />
+    <Folder Include="Ref_hashvalue\" />
+    <Folder Include="Screenshots\" />
+    <Folder Include="Test_files\" />
+    <Folder Include="Web_hashvalue\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutiITScripts\cred.exe" />
+    <Content Include="AutiITScripts\FileUpload1.exe" />
+    <Content Include="chromedriver.exe" />
+    <Content Include="Reference_files\oca2_p3_ModelFiles\ANSYS WORKBENCH\oca2_p3.xml" />
+    <Content Include="Reference_files\oca_ModelFiles\ANSYS WORKBENCH\oca.xml" />
+    <Content Include="Reference_files\orchestrator_hitemp_ModelFiles\ANSYS WORKBENCH\orchestrator_hitemp.xml" />
+    <Content Include="Reference_files\q800_ModelFiles\ANSYS WORKBENCH\q800.xml" />
+    <Content Include="Reference_files\rheology_xlsx_ModelFiles\ANSYS WORKBENCH\rheology.xml" />
+    <Content Include="Reference_files\sa_bt1_ModelFiles\ANSYS WORKBENCH\sa_bt1.xml" />
+    <Content Include="Reference_files\tobias_ModelFiles\ANSYS WORKBENCH\tobias.xml" />
+    <Content Include="Reference_files\tobias_v2_ModelFiles\ANSYS WORKBENCH\tobias_v2.xml" />
+    <Content Include="Reference_files\trios_hitemp_ModelFiles\ANSYS WORKBENCH\trios_hitemp.xml" />
+    <Content Include="TestFiles\oca2_compression.xml" />
+    <Content Include="TestFiles\oca2_dma.xml" />
+    <Content Include="TestFiles\orchestrator_hitemp.txt" />
+    <Content Include="TestFiles\orchestrator_lowtemp.txt" />
+    <Content Include="TestFiles\q800.txt" />
+    <Content Include="TestFiles\trios_hitemp.txt" />
+    <Content Include="TestFiles\trios_hitemp_headings-notes.txt" />
+    <Content Include="TestFiles\trios_hitemp_headings-parameters.txt" />
+    <Content Include="TestFiles\trios_hitemp_headings.txt" />
+    <Content Include="TestFiles\trios_hitemp_no-details.txt" />
+    <Content Include="TestFiles\trios_hitemp_parameters-no-details.txt" />
+    <Content Include="TestFiles\trios_lowtemp.txt" />
+    <Content Include="TestFiles\trios_lowtemp_headings-notes.txt" />
+    <Content Include="TestFiles\trios_lowtemp_headings-parameters.txt" />
+    <Content Include="TestFiles\trios_lowtemp_headings.txt" />
+    <Content Include="TestFiles\trios_lowtemp_no-details.txt" />
+    <Content Include="TestFiles\trios_lowtemp_parameters-no-details.txt" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.11.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.11.1\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnitTestAdapter.2.3.0\build\NUnitTestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.1\build\SpecFlow.targets'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.props'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.94.0.4606.6100\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.94.0.4606.6100\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.2\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\SpecFlow.2.4.1\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" />
+  <Import Project="..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('..\packages\SpecFlow.Tools.MsBuild.Generation.2.4.1\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.94.0.4606.6100\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.94.0.4606.6100\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>

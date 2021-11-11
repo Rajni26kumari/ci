@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EngineeringData version="19.1.0.125" versiondate="4/18/2018 2:37:00 PM">
+  <Notes>
+    3M Material Data
+    Copyright 3M Company
+IMPORTANT NOTICE: The technical information, guidance, and
+other statements contained in this document or otherwise
+provided by 3M are based upon records, tests, or experience
+that 3M believes to be reliable, but the accuracy,
+completeness, and representative nature of such information
+is not guaranteed. Such information is intended for people
+with knowledge and technical skills sufficient to assess and
+apply their own informed judgment to the information. No
+license under any 3M or third party intellectual property
+rights is granted or implied with this information.
+
+PRODUCT SELECTION AND USE: Many factors beyond 3Ms control
+and uniquely within users knowledge and control can affect
+the use and performance of a 3M product in a particular
+application. As a result, customer is solely responsible for
+evaluating the product and determining whether it is
+appropriate and suitable for customers application,
+including conducting a workplace hazard assessment and
+reviewing all applicable regulations and standards (e.g.,
+OSHA, ANSI, etc.). Failure to properly evaluate, select, and
+use a 3M product and appropriate safety products, or to meet
+all applicable safety regulations, may result in injury,
+sickness, death, and/or harm to property.
+
+WARRANTY, LIMITED REMEDY, AND DISCLAIMER: Unless a different
+warranty is specifically stated on the applicable 3M product
+packaging or product literature (in which case such warranty
+governs), 3M warrants that each 3M product meets the
+applicable 3M product specification at the time 3M ships the
+product.
+
+3M MAKES NO OTHER WARRANTIES OR CONDITIONS, EXPRESS OR
+IMPLIED, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTY
+OR CONDITION OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, OR ARISING OUT OF A COURSE OF DEALING, CUSTOM, OR
+USAGE OF TRADE. If a 3M product does not conform to this
+warranty, then the sole and exclusive remedy is, at 3Ms
+option, replacement of the 3M product or refund of the
+purchase price.
+
+LIMITATION OF LIABILITY: Except for the limited remedy
+stated above, and except to the extent prohibited by law, 3M
+will not be liable for any loss or damage arising from or
+related to the 3M product, whether direct, indirect,
+special, incidental, or consequential (including, but not
+limited to, lost profits or business opportunity),
+regardless of the legal or equitable theory asserted,
+including, but not limited to, warranty, contract,
+negligence, or strict liability.
+
+Verification Code: a5eadcdf0b86a35e16813d6c681aec232dd4429c123fa1c6e851062407feb8b6
+
+    Material model exported at 01:49 on 2021-01-28
+  </Notes>
+  <Materials>
+  <MatML_Doc>
+  <Material>
+    <BulkDetails>
+      <Name>sa_bt1</Name>
+      <Source>
+        <Name>3M</Name>
+      </Source>
+      <PropertyData property="pr0">
+        <Data format="string">-</Data>
+        <Qualifier name="Field Variable Compatible">Temperature</Qualifier>
+        <ParameterValue parameter="pa0" format="string">
+          <Data>Interpolation Options</Data>
+          <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+          <Qualifier name="Normalized">True</Qualifier>
+          <Qualifier name="Cached">True</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa1" format="float">
+          <Data>1e-09</Data>
+          <Qualifier name="Variable Type">Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa2" format="float">
+          <Data>0.0</Data>
+          <Qualifier name="Variable Type">Independent</Qualifier>
+          <Qualifier name="Field Variable">Temperature</Qualifier>
+          <Qualifier name="Default Data">0.0</Qualifier>
+          <Qualifier name="Field Units">C</Qualifier>
+          <Qualifier name="Upper Limit">Program Controlled</Qualifier>
+          <Qualifier name="Lower Limit">Program Controlled</Qualifier>
+        </ParameterValue>
+      </PropertyData>
+      <PropertyData property="pr1">
+        <Data format="string">-</Data>
+        <Qualifier name="Behavior">Isotropic</Qualifier>
+        <Qualifier name="Derive from">Young's Modulus and Poisson's Ratio</Qualifier>
+        <Qualifier name="Field Variable Compatible">Temperature</Qualifier>
+        <ParameterValue parameter="pa3" format="string">
+          <Data>Interpolation Options</Data>
+          <Qualifier name="AlgorithmType">Linear Multivariate</Qualifier>
+          <Qualifier name="Normalized">True</Qualifier>
+          <Qualifier name="Cached">True</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa4" format="float">
+          <Data>3186.05</Data>
+          <Qualifier name="Variable Type">Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa5" format="float">
+          <Data>0.49</Data>
+        </ParameterValue>
+        <ParameterValue parameter="pa6" format="float">
+          <Data>0.0</Data>
+          <Qualifier name="Variable Type">Independent</Qualifier>
+          <Qualifier name="Field Variable">Temperature</Qualifier>
+          <Qualifier name="Default Data">0.0</Qualifier>
+          <Qualifier name="Field Units">C</Qualifier>
+          <Qualifier name="Upper Limit">Program Controlled</Qualifier>
+          <Qualifier name="Lower Limit">Program Controlled</Qualifier>
+        </ParameterValue>
+      </PropertyData>
+      <PropertyData property="pr2">
+        <Data format="string">-</Data>
+        <Qualifier name="Definition">Shear Relaxation</Qualifier>
+        <Qualifier name="Number of Terms">14</Qualifier>
+        <ParameterValue parameter="pa7" format="float">
+          <Data>0.078155,0.0510655,0.0457541,0.0407621,0.0453837,0.0826023,0.0728752,0.121629,0.167147,0.133837,0.0930477,0.0483425,0.0130477,0.00230088</Data>
+          <Qualifier name="Variable Type">Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa8" format="float">
+          <Data>1e-10,1.58489e-09,2.51189e-08,3.98107e-07,6.30957e-06,0.0001,0.00158489,0.0251189,0.398107,6.30957,100,1584.89,25118.9,398107</Data>
+          <Qualifier name="Variable Type">Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent,Dependent</Qualifier>
+        </ParameterValue>
+        <ParameterValue parameter="pa9" format="float">
+          <Data>0,1,2,3,4,5,6,7,8,9,10,11,12,13</Data>
+          <Qualifier name="Variable Type">Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent,Independent</Qualifier>
+        </ParameterValue>
+      </PropertyData>
+    </BulkDetails>
+  </Material>
+  <Metadata>
+    <ParameterDetails id="pa0">
+    <Name>Options Variable</Name>
+    <Unitless />
+    </ParameterDetails>
+    <ParameterDetails id="pa1">
+      <Name>Density</Name>
+      <Units name="Density">
+        <Unit>
+          <Name>tonne</Name>
+        </Unit>
+        <Unit power="-3">
+          <Name>mm</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa2">
+      <Name>Temperature</Name>
+      <Units name="Temperature">
+        <Unit>
+          <Name>C</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <PropertyDetails id="pr0" type="mechanical">
+      <Unitless />
+      <Name>Density</Name>
+    </PropertyDetails>
+    <ParameterDetails id="pa3">
+    <Name>Options Variable</Name>
+    <Unitless />
+    </ParameterDetails>
+    <ParameterDetails id="pa4">
+      <Name>Young's Modulus</Name>
+      <Units name="Stress">
+        <Unit>
+          <Name>MPa</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa5">
+      <Name>Poisson's Ratio</Name>
+      <Unitless />
+    </ParameterDetails>
+    <ParameterDetails id="pa6">
+      <Name>Temperature</Name>
+      <Units name="Temperature">
+        <Unit>
+          <Name>C</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <PropertyDetails id="pr1" type="mechanical">
+      <Unitless />
+      <Name>Elasticity</Name>
+    </PropertyDetails>
+    <ParameterDetails id="pa7">
+      <Name>Relative Moduli(i)</Name>
+      <Unitless />
+    </ParameterDetails>
+    <ParameterDetails id="pa8">
+      <Name>Relaxation Time(i)</Name>
+      <Units name="Time">
+        <Unit>
+          <Name>s</Name>
+        </Unit>
+      </Units>
+    </ParameterDetails>
+    <ParameterDetails id="pa9">
+      <Name>Index i</Name>
+      <Unitless />
+    </ParameterDetails>
+    <PropertyDetails id="pr2" type="mechanical">
+      <Unitless />
+      <Name>Prony</Name>
+    </PropertyDetails>
+    <PropertyDetails id="pr3" type="mechanical">
+      <Unitless />
+      <Name>Prony</Name>
+    </PropertyDetails>
+  </Metadata>
+</MatML_Doc>
+</Materials>
+</EngineeringData>
