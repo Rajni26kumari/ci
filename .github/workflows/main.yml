@@ -35,7 +35,7 @@ jobs:
         run: restore nuget ./sharksprayqa.sln
         
       - name: Build the solution
-        run: msbuild.exe ../../Test-CI/Test/sharksprayqa.sln /p:platform="Any CPU" /p:configuration="Debug"
+        run: msbuild.exe ../Test-CI/Test/sharksprayqa.sln /p:platform="Any CPU" /p:configuration="Debug"
         
       - name: Run Tests 
         run : vstest.console.exe .\Test\SharkSprayqa\bin\Debug\SharkSprayqas.dll
