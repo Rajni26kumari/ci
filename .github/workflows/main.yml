@@ -37,5 +37,5 @@ jobs:
       - name: Build the solution
         run: msbuild.exe Test-CI/Test/sharksprayqa.sln /p:platform="Any CPU" /p:configuration="Debug"
         
-      - name: Run Tests 
-        run : vstest.console.exe .\Test\SharkSprayqa\bin\Debug\SharkSprayqas.dll
+      - name: Run SpecFlow Tests 
+        run : dotnet test --no-restore --verbosity normal
